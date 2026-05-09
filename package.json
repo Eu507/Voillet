@@ -1,24 +1,57 @@
 {
-  "name": "web3",
+  "name": "voillet",
   "version": "1.0.0",
-  "description": "A Cripto Wallet with voice interection",
+  "description": "Solana wallet with a voice-native assistant experience",
   "license": "MIT",
   "author": "Mariana, Laís, Samuel",
-  "type": "commonjs",
-  "main": "node.js",
+  "private": true,
+  "type": "module",
+  "main": "node.cjs",
   "engines": {
-    "node": "22.x"
+    "node": ">=22"
   },
   "scripts": {
-    "start": "node --env-file=.env node.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "legacy:start": "node --env-file=.env node.cjs"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "^2.46.0",
+    "@solana/wallet-adapter-base": "^0.9.27",
+    "@solana/wallet-adapter-react": "^0.15.39",
+    "@solana/wallet-adapter-react-ui": "^0.9.39",
+    "@solana/wallet-adapter-wallets": "^0.19.38",
+    "@solana/web3.js": "^1.98.4",
+    "@types/node": "^25.6.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "bip32": "^5.0.1",
     "bip39": "^3.1.0",
     "bitcoinjs-lib": "^7.0.1",
+    "clsx": "^2.1.1",
     "ejs": "^5.0.2",
     "express": "^5.2.1",
-    "tiny-secp256k1": "^2.2.4"
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-qr-code": "^2.0.21",
+    "tiny-secp256k1": "^2.2.4",
+    "typescript": "^6.0.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitest/coverage-v8": "^4.1.5",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6",
+    "jsdom": "^29.1.1",
+    "vitest": "^4.1.5"
   }
 }
