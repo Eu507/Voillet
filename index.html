@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipo de Carteira Crypto</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wallet-container">
+        <header class="wallet-header">
+            <h2>Minha Carteira</h2>
+            <div class="balance">
+                <span class="currency">BTC</span>
+                <h1 id="total-balance">0.4523</h1>
+                <p class="fiat-value">≈ $ 29.450,00 USD</p>
+            </div>
+        </header>
+        
+        <div class="actions">
+            <button id="btn-send" class="btn send">Enviar</button>
+            <button id="btn-receive" class="btn receive">Receber</button>
+        </div>
+        
+        <section class="transactions">
+            <h3>Transações Recentes</h3>
+            <ul id="transaction-list">
+                <!-- O conteúdo das transações será injetado aqui via JavaScript -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="./script.ts"></script>
+</body>
+</html>

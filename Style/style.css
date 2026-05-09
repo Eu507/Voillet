@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wallet-container {
+    background-color: #1e1e1e;
+    width: 350px;
+    border-radius: 20px;
+    padding: 25px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.wallet-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.wallet-header h2 {
+    font-size: 1.2rem;
+    color: #aaaaaa;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.balance {
+    background: linear-gradient(135deg, #f7931a, #e67e22);
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(247, 147, 26, 0.2);
+}
+
+.currency {
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+#total-balance {
+    font-size: 2.8rem;
+    margin: 5px 0;
+    letter-spacing: -1px;
+}
+
+.fiat-value {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn.send {
+    background-color: #ff4757;
+}
+
+.btn.receive {
+    background-color: #2ed573;
+}
+
+.transactions h3 {
+    font-size: 1.1rem;
+    color: #aaaaaa;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+#transaction-list {
+    list-style: none;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+#transaction-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+#transaction-list::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 5px;
+}
+
+.tx-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.tx-info span {
+    display: block;
+}
+
+.tx-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.tx-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+.tx-amount {
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+.tx-amount.positive {
+    color: #2ed573;
+}
+
+.tx-amount.negative {
+    color: #ff4757;
+}
